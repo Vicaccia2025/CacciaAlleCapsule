@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Caccia alle capsule</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+  <style>
+    :root{
+      --bg:#050816;
+      --card:#0b1120;
+      --card-soft:#111827;
+      --shadow:0 18px 40px rgba(0,0,0,.8);
+      --radius:20px;
+      --accent:#facc15;
+      --accent-soft:#f97316;
+      --text-main:#e5e7eb;
+      --text-muted:#9ca3af;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      background:
+        radial-gradient(circle at top, rgba(56,189,248,.15), transparent 55%),
+        radial-gradient(circle at bottom, rgba(244,114,182,.12), transparent 55%),
+        var(--bg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text-main);
+    }
+    .wrap{
+      max-width:1100px;
+      margin:24px auto;
+      padding:0 16px 40px;
+    }
+    .card{
+      background:linear-gradient(135deg, #020617 0%, var(--card) 45%, #020617 100%);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px;
+      border:1px solid rgba(148,163,184,.25);
+      backdrop-filter:blur(8px);
+    }
+    header.card{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:16px 18px; position:relative; overflow:hidden;
+    }
+    header.card::before{
+      content:""; position:absolute; inset:-1px; border-radius:inherit;
+      padding:1px;
+      background:linear-gradient(90deg, #f97316, #facc15, #22d3ee);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite:xor; mask-composite:exclude;
+      opacity:.8;
+    }
+    header.card > *{position:relative; z-index:1;}
+
+    /* Layout 2 colonne */
+    .grid{
+      display:grid; grid-template-columns: 1.2fr .8fr;
+      gap:18px; margin-top:18px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns: 1fr} }
+
+    /* Mappa */
+    .map-card .title{display:flex; align-items:center; justify-content:space-between; margin-bottom:10px}
+    .map-card h2{color:var(--accent);}
+    #map{
+      height:62vh; border-radius:14px; overflow:hidden;
+      border:1px solid rgba(148,163,184,.45);
+    }
+    @media (max-width: 900px){ #map{height:58vh} }
+
+    /* Pannello classifica */
+    #panel h2{margin:0 0 8px; font-size:18px; color:var(--accent);}
+    #panel .meta{font-size:12px; color:var(--text-muted); margin-bottom:6px}
+    #leaderboard{list-style:none; padding:0; margin:8px 0 0}
+    #leaderboard li{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:8px 10px;
+      border-radius:10px;
+      margin-bottom:6px;
+      background:var(--card-soft);
+      border:1px solid rgba(107,114,128,.5);
+    }
+    .badge{display:flex; align-items:center; gap:8px; font-weight:600}
+    .dot{
+      width:12px; height:12px; border-radius:50%;
+      display:inline-block;
+      background:#555;
+      box-shadow:0 0 0 2px rgba(15,23,42,.9);
+    }
+    .count{
+      font-variant-numeric:tabular-nums;
+      font-weight:700;
+      color:var(--accent-soft);
+      text-align:right;
+    }
+
+    .btn{
+      padding:8px 12px;
+      border-radius:10px;
+      background:var(--accent);
+      color:#0b1120;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 6px 18px rgba(250,204,21,.4);
+      border:none; cursor:pointer; font-size:13px;
+    }
+
+    /* Legenda */
+    .legend{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;
+      font-size:12px; color:var(--text-muted);
+    }
+    .legend span{display:flex; align-items:center; gap:6px}
+
+    /* Emoji markers (Leaflet divIcon) */
+    .leaflet-marker-icon.text-marker{background:transparent; border:none;}
+    .text-marker{font-size:28px; line-height:1; filter: drop-shadow(0 1px 2px rgba(0,0,0,.7));}
+
+    /* Riquadro foto */
+    #photo h2{margin:0 0 10px;font-size:18px; color:var(--accent);}
+    .photo-wrap{display:flex;flex-direction:column;gap:8px}
+    .photo-frame{
+      width:100%; aspect-ratio: 16/10; border-radius:12px; overflow:hidden;
+      background:radial-gradient(circle at top, rgba(56,189,248,.25), transparent 60%), #020617;
+      display:flex; align-items:center; justify-content:center;
+      border:1px solid rgba(148,163,184,.4);
+    }
+    .photo-frame img{max-width:100%; max-height:100%; width:auto; height:auto; display:block}
+    .photo-caption{font-size:13px; color:var(--text-muted);}
+    .photo-actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap; font-size:13px}
+    .hide{display:none !important}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="card">
+      <div style="display:flex; align-items:center; gap:10px">
+        <h1 style="font-size:18px; margin:0">🪐 Guida galattica per Vicacciatori — Caccia alle capsule </h1>
+      </div>
+      <!-- Timer rimosso -->
+    </header>
+
+    <div class="grid">
+      <!-- Colonna sinistra: mappa -->
+      <section class="card map-card">
+        <div class="title">
+          <h2 style="margin:0;font-size:16px">🗺️ Mappa</h2>
+          <a class="btn" href="#" onclick="location.reload()">Aggiorna</a>
+        </div>
+        <div id="map"></div>
+      </section>
+
+      <!-- Colonna destra: classifica + foto -->
+      <div class="side" style="display:flex; flex-direction:column; gap:18px">
+        <aside class="card" id="panel">
+          <h2>🏆 Classifica</h2>
+          <div class="meta" id="summary">Caricamento…</div>
+          <ol id="leaderboard"></ol>
+          <div class="legend" id="legend"></div>
+        </aside>
+
+        <aside class="card hide" id="photo">
+          <h2 id="photo-title">📸 Foto punto</h2>
+          <div class="photo-wrap">
+            <div class="photo-frame">
+              <img id="photo-img" src="images/placeholder.svg" alt="Foto del punto" />
+            </div>
+            <div class="photo-caption" id="photo-caption">Clicca un pin per vedere la foto associata.</div>
+            <div class="photo-actions">
+              <a id="photo-open" href="images/placeholder.svg" target="_blank" rel="noopener">Apri immagine</a>
+              <button id="photo-hide" type="button" class="btn" style="background:var(--accent-soft); color:#020617">Chiudi</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    // ===== MAPPA =====
+    const map = L.map('map').setView([40.660, 14.420], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // ===== TEAM DATA (colori + emoji) =====
+    const TEAM_LIST = [
+      { name: 'Juventude Bonea', color: '#e74c3c', emoji: '☢️' },
+      { name: 'Assi',            color: '#2980b9', emoji: '🃏' },
+      { name: 'Inseriooni',      color: '#27ae60', emoji: '🐲' },
+      { name: 'Volpi Del Faito', color: '#f1c40f', emoji: '🦊' },
+      { name: 'Sans Village',    color: '#8e44ad', emoji: '🏠' },
+      { name: 'Falò',            color: '#e67e22', emoji: '🔥' },
+      { name: 'Hunters',         color: '#16a085', emoji: '🦈' },
+      { name: 'Segugi',          color: '#2c3e50', emoji: '🐶' },
+      { name: 'Modianus',        color: '#d35400', emoji: '🐉' }
+    ];
+    const TEAM_COLORS = Object.fromEntries(TEAM_LIST.map(t => [t.name.toLowerCase(), t.color]));
+    const TEAM_EMOJIS = Object.fromEntries(TEAM_LIST.map(t => [t.name.toLowerCase(), t.emoji]));
+    const TEAM_NAME   = Object.fromEntries(TEAM_LIST.map(t => [t.name.toLowerCase(), t.name]));
+
+    function teamEmoji(name){
+      if(!name) return '📍';
+      const key = String(name).trim().toLowerCase();
+      return TEAM_EMOJIS[key] || '📍';
+    }
+
+    // ===== Carica PIN =====
+    let pins = [];
+    try{
+      const res = await fetch('pins.json?ts=' + Date.now(), { cache: 'no-store' });
+      pins = await res.json();
+    }catch(e){
+      console.error('Errore nel caricare pins.json', e);
+    }
+
+    // ===== Marker emoji + click per foto =====
+    pins.forEach(p => {
+      const icon = L.divIcon({
+        className: 'text-marker',
+        html: teamEmoji(p.foundBy),
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+      const marker = L.marker([p.lat, p.lng], { icon }).addTo(map);
+
+      const who = p.foundBy ? `Trovato da <strong>${escapeHtml(p.foundBy)}</strong>` : `<em>Non ancora trovato</em>`;
+      marker.bindPopup(
+        `${p.title ? `<strong>${escapeHtml(p.title)}</strong><br>` : ''}` +
+        `${p.desc  ? `${escapeHtml(p.desc)}<br>` : ''}` +
+        `${who}`
+      );
+
+      marker.on('click', () => showPhoto(p));
+    });
+
+    const stats = {};   // teamKey -> {capsule, foto, punti}
+    let foundCount = 0; // capsule totali trovate
+
+    function hasFotoBonus(p){
+      const v = (p.foto || '').toString().trim().toLowerCase();
+      return v === 'si';
+    }
+
+    pins.forEach(p => {
+      if (p.foundBy) {
+        foundCount++;
+
+        const key = String(p.foundBy).trim().toLowerCase();
+
+        if (!stats[key]) {
+          stats[key] = { capsule: 0, foto: 0, punti: 0 };
+        }
+
+        // 1 punto per la capsula trovata
+        stats[key].capsule += 1;
+
+        // +1 se hanno fatto la foto
+        if (hasFotoBonus(p)) {
+          stats[key].foto += 1;
+        }
+
+        stats[key].punti = stats[key].capsule + stats[key].foto;
+      }
+    });
+
+    renderSummary(foundCount, pins.length);
+    renderLeaderboard(stats);
+    renderLegend();
+
+    // ===== Riquadro foto =====
+    const photoCard = document.getElementById('photo');
+    const photoImg = document.getElementById('photo-img');
+    const photoTitle = document.getElementById('photo-title');
+    const photoCaption = document.getElementById('photo-caption');
+    const photoOpen = document.getElementById('photo-open');
+    document.getElementById('photo-hide').addEventListener('click', () => photoCard.classList.add('hide'));
+
+    function showPhoto(p){
+      const src = (p.img && String(p.img).trim()) || 'images/placeholder.svg';
+      photoImg.src = src;
+      photoImg.alt = p.title ? `Foto: ${escapeHtml(p.title)}` : 'Foto del punto';
+      photoOpen.href = src;
+      photoTitle.textContent = p.title ? `📸 ${p.title}` : '📸 Foto punto';
+      photoCaption.textContent = p.desc ? p.desc : (p.img ? 'Immagine associata al punto.' : 'Nessuna immagine disponibile.');
+      photoCard.classList.remove('hide');
+    }
+
+    // ===== Helpers =====
+    function renderSummary(found, total){
+      document.getElementById('summary').textContent = `Capsule trovate: ${found} / ${total}`;
+    }
+
+    function renderLegend(){
+      const el = document.getElementById('legend');
+      el.innerHTML = '';
+      TEAM_LIST.forEach(({name, color, emoji}) => {
+        const span = document.createElement('span');
+        span.innerHTML = `<span class="dot" style="background:${color}"></span> ${escapeHtml(emoji)} ${escapeHtml(name)}`;
+        el.appendChild(span);
+      });
+    }
+
+    function renderLeaderboard(stats){
+      const list = document.getElementById('leaderboard');
+      list.innerHTML = '';
+
+      const items = Object.entries(stats)
+        .map(([teamKey, s]) => ({
+          teamKey,
+          capsule: s.capsule,
+          foto: s.foto,
+          punti: s.punti
+        }))
+        .sort((a,b) => b.punti - a.punti || a.teamKey.localeCompare(b.teamKey, 'it'));
+
+      if (items.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'Nessun ritrovamento registrato';
+        list.appendChild(li);
+        return;
+      }
+
+      items.forEach(({teamKey, capsule, foto, punti}) => {
+        const color  = TEAM_COLORS[teamKey] || '#555';
+        const emoji  = TEAM_EMOJIS[teamKey] || '📍';
+        const pretty = TEAM_NAME[teamKey] || teamKey;
+
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span class="badge">
+            <span class="dot" style="background:${color}"></span>
+            ${escapeHtml(emoji)} ${escapeHtml(pretty)}
+          </span>
+          <span class="count">
+            ${punti} pt
+            <br>
+            <small style="font-weight:400; color:var(--text-muted); font-size:11px;">
+              ${capsule} capsula/e + ${foto} foto
+            </small>
+          </span>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    function escapeHtml(str){
+      return String(str).replace(/[&<>"']/g, s => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      })[s]);
+    }
+  });
+  </script>
+</body>
+</html>
