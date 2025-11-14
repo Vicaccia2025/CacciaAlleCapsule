@@ -43,6 +43,60 @@
     "foundBy": "Assi" ,
     "img": "images/p9.png",
     "foto": "si"
+    },
+  {
+    "id": "12", 
+    "lat":"40.6519487",
+    "lng":"14.4271339" ,
+    "title": "Fornacelle",
+    "foundBy": "Juventude Bonea" ,
+    "img": "images/p12.jpg",
+    "foto": "si”
+    },
+  {
+    "id": "16", 
+    "lat":"40.669265",
+    "lng":"14.445806" ,
+    "title": "via Madonna delle Grazie",
+    "foundBy": "Sans Village" ,
+    "img": "images/p16.jpg",
+    "foto": "no”
+    },
+  {
+    "id": "6", 
+    "lat":"40.668659",
+    "lng":"14.437550" ,
+    "title": "convento San Francesco",
+    "foundBy": "Sans Village" ,
+    "img": "images/p6.jpg",
+    "foto": "no”
+    },
+  {
+    "id": "22", 
+    "lat":"40.654720",
+    "lng":"14.407862" ,
+    "title": "via Cappella del Monte",
+    "foundBy": "Sans Village" ,
+    "img": "images/p22.jpg",
+    "foto": "no”
+    },
+  {
+    "id": "18", 
+    "lat":"40.647823",
+    "lng":"14.431707" ,
+    "title": "bivio Pacognano",
+    "foundBy": "Sans Village" ,
+    "img": "images/p18.jpg",
+    "foto": "no”
+    },
+  {
+    "id": "1", 
+    "lat":"40.668335",
+    "lng":"14.442494" ,
+    "title": "via San Filippo 5",
+    "foundBy": "Sans Village" ,
+    "img": "images/p1.jpg",
+    "foto": "no”
     }
 ]
 
