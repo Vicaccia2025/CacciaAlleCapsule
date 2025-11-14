@@ -16,6 +16,24 @@
     "foundBy": "Volpi Del Faito",
     "img": "images/p33.png",
     "foto": "no"
-  }
+  },
+  {
+    "id": "38", 
+    "lat":"40.66817",
+    "lng":"14.44824" ,
+    "title": "Via Madonna delle Grazie",
+    "foundBy": "Volpi Del Faito" ,
+    "img": "images/p38.jpg",
+    "foto": "si"
+  },
+  {
+    "id": "21", 
+    "lat":"40.6586294",
+    "lng":"14.4972358" ,
+    "title": "San Michele, Faito",
+    "foundBy": "Assi" ,
+    "img": "images/p21.jpg",
+    "foto": "si"
+  },
 ]
 
