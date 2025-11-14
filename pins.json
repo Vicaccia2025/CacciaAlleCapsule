@@ -3,10 +3,19 @@
     "id": 10,
     "lat": 40.6421851,
     "lng": 14.4473460,
-    "title": "Crapolla",
+    "title": "Arola",
     "foundBy": "Juventude Bonea",
     "img": "images/p10.png",
     "foto": "si"
+  },
+    {
+    "id": 33,
+    "lat": 40,65745,
+    "lng": 14,43857,
+    "title": "Via Bell'Alba",
+    "foundBy": "Volpi del Faito",
+    "img": "images/p33.png",
+    "foto": "no"
   }
 ]
 
