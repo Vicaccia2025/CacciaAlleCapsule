@@ -51,7 +51,7 @@
     "title": "Fornacelle",
     "foundBy": "Juventude Bonea" ,
     "img": "images/p12.jpg",
-    "foto": "si”
+    "foto": "si"
     },
   {
     "id": "16", 
@@ -60,7 +60,7 @@
     "title": "via Madonna delle Grazie",
     "foundBy": "Sans Village" ,
     "img": "images/p16.jpg",
-    "foto": "no”
+    "foto": "no"
     },
   {
     "id": "6", 
@@ -69,7 +69,7 @@
     "title": "convento San Francesco",
     "foundBy": "Sans Village" ,
     "img": "images/p6.jpg",
-    "foto": "no”
+    "foto": "no"
     },
   {
     "id": "22", 
@@ -78,7 +78,7 @@
     "title": "via Cappella del Monte",
     "foundBy": "Sans Village" ,
     "img": "images/p22.jpg",
-    "foto": "no”
+    "foto": "no"
     },
   {
     "id": "18", 
@@ -87,7 +87,7 @@
     "title": "bivio Pacognano",
     "foundBy": "Sans Village" ,
     "img": "images/p18.jpg",
-    "foto": "no”
+    "foto": "no"
     },
   {
     "id": "1", 
@@ -96,7 +96,7 @@
     "title": "via San Filippo 5",
     "foundBy": "Sans Village" ,
     "img": "images/p1.jpg",
-    "foto": "no”
+    "foto": "no"
     }
 ]
 
