@@ -150,7 +150,7 @@
       <div style="display:flex; align-items:center; gap:10px">
         <h1 style="font-size:18px; margin:0">🪐 Guida galattica per Vicacciatori — Caccia alle capsule </h1>
       </div>
-      <!-- Timer rimosso -->
+
     </header>
 
     <div class="grid">
@@ -167,7 +167,9 @@
       <div class="side" style="display:flex; flex-direction:column; gap:18px">
         <aside class="card" id="panel">
           <h2>🏆 Classifica</h2>
-          <div class="meta" id="summary">Caricamento…</div>
+          <div class="meta" id="summary">
+            Punteggio: 2 punti per capsula trovata, 3 punti per foto.
+          </div>
           <ol id="leaderboard"></ol>
           <div class="legend" id="legend"></div>
         </aside>
@@ -234,7 +236,7 @@
       console.error('Errore nel caricare pins.json', e);
     }
 
-    // ===== Marker emoji + click per foto =====
+
     pins.forEach(p => {
       const icon = L.divIcon({
         className: 'text-marker',
@@ -254,8 +256,9 @@
       marker.on('click', () => showPhoto(p));
     });
 
-    const stats = {};   // teamKey -> {capsule, foto, punti}
-    let foundCount = 0; // capsule totali trovate
+
+    const stats = {};   
+    let foundCount = 0; 
 
     function hasFotoBonus(p){
       const v = (p.foto || '').toString().trim().toLowerCase();
@@ -272,23 +275,24 @@
           stats[key] = { capsule: 0, foto: 0, punti: 0 };
         }
 
-        // 1 punto per la capsula trovata
+        // Conta quante capsule
         stats[key].capsule += 1;
 
-        // +1 se hanno fatto la foto
+
         if (hasFotoBonus(p)) {
           stats[key].foto += 1;
         }
 
-        stats[key].punti = stats[key].capsule + stats[key].foto;
+
+        stats[key].punti = stats[key].capsule * 2 + stats[key].foto * 3;
       }
     });
 
-    renderSummary(foundCount, pins.length);
     renderLeaderboard(stats);
     renderLegend();
 
-    // ===== Riquadro foto =====
+
+
     const photoCard = document.getElementById('photo');
     const photoImg = document.getElementById('photo-img');
     const photoTitle = document.getElementById('photo-title');
@@ -306,10 +310,6 @@
       photoCard.classList.remove('hide');
     }
 
-    // ===== Helpers =====
-    function renderSummary(found, total){
-      document.getElementById('summary').textContent = `Capsule trovate: ${found} / ${total}`;
-    }
 
     function renderLegend(){
       const el = document.getElementById('legend');
@@ -373,3 +373,4 @@
   </script>
 </body>
 </html>
+
