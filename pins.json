@@ -78,7 +78,7 @@
     "title": "via Cappella del Monte",
     "foundBy": "Sans Village" ,
     "img": "images/p22.png",
-    "foto": "no"
+    "foto": "si"
     },
   {
     "id": "18", 
@@ -87,7 +87,7 @@
     "title": "bivio Pacognano",
     "foundBy": "Sans Village" ,
     "img": "images/p18.png",
-    "foto": "no"
+    "foto": "si"
     },
   {
     "id": "1", 
@@ -96,7 +96,7 @@
     "title": "via San Filippo 5",
     "foundBy": "Sans Village" ,
     "img": "images/p1.png",
-    "foto": "no"
+    "foto": "si"
     },
     {
     "id": "17", 
@@ -105,7 +105,7 @@
     "title": "Via Santa Maria Del Toro",
     "foundBy": "Sans Village" ,
     "img": "images/p17.png",
-    "foto": "no"
+    "foto": "si"
     }
 ]
 
