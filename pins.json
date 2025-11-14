@@ -98,5 +98,14 @@
     "img": "images/p1.png",
     "foto": "no"
     }
+    {
+    "id": "17", 
+    "lat":"40.6638889",
+    "lng":"14.4305555" ,
+    "title": "Via Santa Maria Del Toro",
+    "foundBy": "Sans Village" ,
+    "img": "images/p17.png",
+    "foto": "no"
+    }
 ]
 
