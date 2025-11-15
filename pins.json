@@ -197,6 +197,15 @@
     "img": "images/p26.png",
     "foto": "si"
   },
+    {
+    "id": "19", 
+    "lat":"40.65111",
+    "lng":"14.46805" ,
+    "title": "Mulino Arenarius",
+    "foundBy": "Modianus" ,
+    "img": "images/p19.png",
+    "foto": "si"
+  },
   {
     "id": "31", 
     "lat":"40.65446",
