@@ -106,6 +106,33 @@
     "foundBy": "Sans Village" ,
     "img": "images/p17.png",
     "foto": "si"
-    }
+    },
+  {
+    "id": "39", 
+    "lat":"48.66429",
+    "lng":"14.43603" ,
+    "title": "Parcheggio Bonea",
+    "foundBy": "Juventude Bonea" ,
+    "img": "images/p39.png",
+    "foto": "si”
+    },
+  {
+    "id": "30", 
+    "lat":"40.6575888",
+    "lng":"14.4221923" ,
+    "title": "Via Santa Maria Vecchia",
+    "foundBy": "Juventude Bonea" ,
+    "img": "images/p30.png",
+    "foto": "si"
+  },
+  {
+    "id": "8", 
+    "lat":"40.6600926",
+    "lng":"14.4449669" ,
+    "title": "Raspolo (Massaquano)",
+    "foundBy": "Falò" ,
+    "img": "images/p8.jpg",
+    "foto": "si"
+  }
 ]
 
