@@ -204,7 +204,7 @@
     "title": "Mulino Arenarius",
     "foundBy": "Modianus" ,
     "img": "images/p19.png",
-    "foto": "si"
+    "foto": "no"
   },
   {
     "id": "31", 
@@ -213,7 +213,7 @@
     "title": "Cartello Moiano",
     "foundBy": "Volpi Del Faito" ,
     "img": "images/p31.png",
-    "foto": "no"
+    "foto": "si"
   }
 ]
 
