@@ -196,6 +196,15 @@
     "foundBy": "falò" ,
     "img": "images/p26.png",
     "foto": "si"
+  },
+  {
+    "id": "31", 
+    "lat":"40.65446",
+    "lng":"14.45559" ,
+    "title": "Cartello Moiano",
+    "foundBy": "Volpi Del Faito" ,
+    "img": "images/p31.png",
+    "foto": "si"
   }
 ]
 
