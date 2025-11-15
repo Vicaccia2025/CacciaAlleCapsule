@@ -178,6 +178,24 @@
     "foundBy": "hunters" ,
     "img": "images/p15.png",
     "foto": "si"
+  },
+  {
+    "id": "40", 
+    "lat":"40.63423",
+    "lng":"14.44133" ,
+    "title": "Arola",
+    "foundBy": "inseriooni" ,
+    "img": "images/p40.jpg",
+    "foto": "si"
+  },
+  {
+    "id": "26", 
+    "lat":"40.64411",
+    "lng":"14.42644" ,
+    "title": "via camaldoli arola",
+    "foundBy": "falò" ,
+    "img": "images/p26.jpg",
+    "foto": "si"
   }
 ]
 
