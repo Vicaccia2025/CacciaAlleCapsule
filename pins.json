@@ -114,7 +114,7 @@
     "title": "Parcheggio Bonea",
     "foundBy": "Juventude Bonea" ,
     "img": "images/p39.png",
-    "foto": "si”
+    "foto": "si"
     },
   {
     "id": "30", 
@@ -131,7 +131,7 @@
     "lng":"14.4449669" ,
     "title": "Raspolo (Massaquano)",
     "foundBy": "Falò" ,
-    "img": "images/p8.jpg",
+    "img": "images/p8.png",
     "foto": "si"
   }
 ]
