@@ -69,7 +69,7 @@
     "title": "convento San Francesco",
     "foundBy": "Sans Village" ,
     "img": "images/p6.png",
-    "foto": "no"
+    "foto": "si"
     },
   {
     "id": "22", 
@@ -205,6 +205,15 @@
     "foundBy": "Modianus" ,
     "img": "images/p19.png",
     "foto": "no"
+  },
+      {
+    "id": "36", 
+    "lat":"40.64386",
+    "lng":"14.45531" ,
+    "title": "Ticciano",
+    "foundBy": "Falò" ,
+    "img": "images/p36.png",
+    "foto": "si"
   },
   {
     "id": "31", 
