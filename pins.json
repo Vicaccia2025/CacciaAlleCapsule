@@ -133,6 +133,51 @@
     "foundBy": "Falò" ,
     "img": "images/p8.png",
     "foto": "si"
-  }
+  },
+  {
+    "id": "14", 
+    "lat":"40.6636740",
+    "lng":"14.4239481" ,
+    "title": "Borgo Vescovado",
+    "foundBy": "Juventude Bonea" ,
+    "img": "images/p14.png",
+    "foto": "si"
+  },
+  {
+    "id": "11", 
+    "lat":"40.6612119",
+    "lng":"14.4409480" ,
+    "title": "Via Luigi Avellino",
+    "foundBy": "Falò" ,
+    "img": "images/p11.png",
+    "foto": "si"
+  },
+  {
+    "id": "2", 
+    "lat":"40.6706658",
+    "lng":"14.4762753" ,
+    "title": "funivia faito",
+    "foundBy": "Falò" ,
+    "img": "images/p2.png",
+    "foto": "si"
+  },
+  {
+    "id": "27", 
+    "lat":"40.65906",
+    "lng":"14.43688" ,
+    "title": "Via S. Francesco",
+    "foundBy": "Assi" ,
+    "img": "images/p.png ",
+    "foto": "si"
+  },
+  {
+    "id": "15", 
+    "lat":"40.659711",
+    "lng":"14.427156" ,
+    "title": "Via rivo d'arco",
+    "foundBy": "hunters" ,
+    "img": "images/p15.png",
+    "foto": "no"
+  },
 ]
 
