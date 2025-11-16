@@ -125,6 +125,15 @@
     "img": "images/p30.png",
     "foto": "si"
   },
+    {
+    "id": "3", 
+    "lat":"40.66115",
+    "lng":"14.42524" ,
+    "title": "Piazza Guglielmo Marconi",
+    "foundBy": "Inseriooni" ,
+    "img": "images/p3.png",
+    "foto": "si"
+  },
   {
     "id": "8", 
     "lat":"40.6600926",
