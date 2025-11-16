@@ -27,6 +27,15 @@
     "foto": "si"
   },
   {
+    "id": "13", 
+    "lat":"40.64684",
+    "lng":"14.42312" ,
+    "title": "Chiesa Alberi",
+    "foundBy": "Sans Village" ,
+    "img": "images/p13.png"
+    "foto": "no"
+   },
+  {
     "id": "21", 
     "lat":"40.6586294",
     "lng":"14.4972358" ,
