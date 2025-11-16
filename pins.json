@@ -18,6 +18,15 @@
     "foto": "si"
   },
   {
+    "id": "25", 
+    "lat":"40.6650802",
+    "lng":"14.4769848" ,
+    "title": "Cinciallegra",
+    "foundBy": "Juventude Bonea" ,
+    "img": "images/p25.png",
+    "foto": "si"
+  },
+  {
     "id": "38", 
     "lat":"40.66817",
     "lng":"14.44824" ,
