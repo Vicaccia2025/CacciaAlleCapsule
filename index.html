@@ -170,6 +170,21 @@
     }
     .legend span{display:flex; align-items:center; gap:6px}
     .leaflet-marker-icon.text-marker{background:transparent; border:none;}
+    .question-marker-wrapper{background:transparent; border:none;}
+.question-marker{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  background:#000;
+  border:2px solid #111827;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#facc15;
+  font-weight:700;
+  font-size:18px;
+  box-shadow:0 0 10px rgba(0,0,0,.9);
+}
     .text-marker{font-size:28px; line-height:1; filter: drop-shadow(0 1px 2px rgba(0,0,0,.7));}
     #photo h2{margin:0 0 10px;font-size:18px; color:var(--accent);}
     .photo-wrap{display:flex;flex-direction:column;gap:8px}
@@ -272,24 +287,41 @@
       console.error('Errore nel caricare pins.json', e);
     }
 
-    pins.forEach(p => {
-      const icon = L.divIcon({
-        className: 'text-marker',
-        html: teamEmoji(p.foundBy),
-        iconSize: [28, 28],
-        iconAnchor: [14, 14]
-      });
-      const marker = L.marker([p.lat, p.lng], { icon }).addTo(map);
+pins.forEach(p => {
+  let icon;
 
-      const who = p.foundBy ? `Trovato da <strong>${escapeHtml(p.foundBy)}</strong>` : `<em>Non ancora trovato</em>`;
-      marker.bindPopup(
-        `${p.title ? `<strong>${escapeHtml(p.title)}</strong><br>` : ''}` +
-        `${p.desc  ? `${escapeHtml(p.desc)}<br>` : ''}` +
-        `${who}`
-      );
+  if (!p.foundBy) {
 
-      marker.on('click', () => showPhoto(p));
+    icon = L.divIcon({
+      className: 'question-marker-wrapper',
+      html: '<div class="question-marker">?</div>',
+      iconSize: [28, 28],
+      iconAnchor: [14, 14]
     });
+  } else {
+    icon = L.divIcon({
+      className: 'text-marker',
+      html: teamEmoji(p.foundBy),
+      iconSize: [28, 28],
+      iconAnchor: [14, 14]
+    });
+  }
+
+  const marker = L.marker([p.lat, p.lng], { icon }).addTo(map);
+
+  const who = p.foundBy
+    ? `Trovato da <strong>${escapeHtml(p.foundBy)}</strong>`
+    : `<em>Non ancora trovato</em>`;
+
+  marker.bindPopup(
+    `${p.title ? `<strong>${escapeHtml(p.title)}</strong><br>` : ''}` +
+    `${p.desc  ? `${escapeHtml(p.desc)}<br>` : ''}` +
+    `${who}`
+  );
+
+  marker.on('click', () => showPhoto(p));
+});
+
 
     const stats = {};
     let foundCount = 0;
