@@ -206,6 +206,15 @@
     "img": "images/p15.png",
     "foto": "si"
   },
+    {
+    "id": "5", 
+    "lat":"40.658475",
+    "lng":"14.419031" ,
+    "title": "Marina d'Aequa",
+    "foundBy": "hunters" ,
+    "img": "images/p5.png",
+    "foto": "si"
+  },
   {
     "id": "40", 
     "lat":"40.63423",
