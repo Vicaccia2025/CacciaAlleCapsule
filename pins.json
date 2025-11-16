@@ -225,6 +225,15 @@
     "foto": "no"
   },
   {
+    "id": "4", 
+    "lat":"40.6458333",
+    "lng":"14.472777" ,
+    "title": "Ponte Rivo Anaro",
+    "foundBy": "Modianus" ,
+    "img": "images/p4.png",
+    "foto": "no"
+  },
+  {
     "id": "23", 
     "lat":"40.654658",
     "lng":"14.406342" ,
