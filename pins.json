@@ -44,6 +44,15 @@
     "img": "images/p21.png",
     "foto": "si"
   },
+    {
+    "id": "24", 
+    "lat":"40.656604",
+    "lng":"14.421716" ,
+    "title": "Piazza Seiano",
+    "foundBy": "Assi" ,
+    "img": "images/p24.png",
+    "foto": "si"
+  },
   {
     "id": "9", 
     "lat":"40.6388888",
