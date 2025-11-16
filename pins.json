@@ -313,6 +313,51 @@
     "foundBy": "Volpi Del Faito" ,
     "img": "images/p31.png",
     "foto": "si"
+  },
+   {
+    "id": "?????",
+    "lat": 40.66551,
+    "lng": 14.4277,
+    "title": "ZONA MARINA DI VICO",
+    "foundBy": "",
+    "img": "images/p?.png",
+    "foto": "no"
+  },
+  {
+    "id": "????",
+    "lat": 40.635615,
+    "lng": 14.4368161,
+    "title": "Arola",
+    "foundBy": "",
+    "img": "images/p?.png",
+    "foto": "no"
+  },
+  {
+    "id": "???",
+    "lat": 40.66112,
+    "lng": 14.41944,
+    "title": "ZONA SPIAGGIA SEIANO",
+    "foundBy": "",
+    "img": "images/p?.png",
+    "foto": "no"
+  },
+  {
+    "id": "??",
+    "lat": 40.67024,
+    "lng": 14.47148,
+    "title": "ZONA BELVEDERE FAITO",
+    "foundBy": "",
+    "img": "images/p?.png",
+    "foto": "no"
+  },
+  {
+    "id": "?",
+    "lat": 40.649435,
+    "lng": 14.409519,
+    "title": "ZONA ALIMURI",
+    "foundBy": "",
+    "img": "images/p?.png",
+    "foto": "no"
   }
 ]
 
