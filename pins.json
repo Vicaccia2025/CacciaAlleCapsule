@@ -206,6 +206,24 @@
     "img": "images/p19.png",
     "foto": "no"
   },
+  {
+    "id": "23", 
+    "lat":"40.654658",
+    "lng":"14.406342" ,
+    "title": "montechiaro",
+    "foundBy": "hunters" ,
+    "img": "images/p23.png",
+    "foto": "si"
+  },
+  {
+    "id": "28", 
+    "lat":"40.661975",
+    "lng":"14.430869" ,
+    "title": "sconduci",
+    "foundBy": "hunters" ,
+    "img": "images/p28.png",
+    "foto": "si"
+  },
       {
     "id": "36", 
     "lat":"40.64386",
