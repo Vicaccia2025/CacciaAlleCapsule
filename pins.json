@@ -18,6 +18,14 @@
     "foto": "si"
   },
   {
+    "id": "29", 
+    "lat":"40.65801",
+    "lng":"14.43096" ,
+    "title": "Via Fontanelle",
+    "foundBy": "Juventude Bonea" ,
+    "img": "images/p29.png"
+    "foto": "si"
+  {
     "id": "25", 
     "lat":"40.6650802",
     "lng":"14.4769848" ,
