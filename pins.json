@@ -324,22 +324,22 @@
     "foto": "no"
   },
   {
-    "id": "????",
+    "id": "20",
     "lat": 40.635615,
     "lng": 14.4368161,
     "title": "Arola",
-    "foundBy": "",
-    "img": "images/p?.png",
-    "foto": "no"
+    "foundBy": "Hunters",
+    "img": "images/p20.png",
+    "foto": "si"
   },
   {
-    "id": "???",
+    "id": "32",
     "lat": 40.66112,
     "lng": 14.41944,
-    "title": "ZONA SPIAGGIA SEIANO",
-    "foundBy": "",
-    "img": "images/p?.png",
-    "foto": "no"
+    "title": "SPIAGGIA SEIANO",
+    "foundBy": "Hunters",
+    "img": "images/p32.png",
+    "foto": "si"
   },
   {
     "id": "??",
@@ -351,13 +351,13 @@
     "foto": "no"
   },
   {
-    "id": "?",
+    "id": "37",
     "lat": 40.649435,
     "lng": 14.409519,
-    "title": "ZONA ALIMURI",
-    "foundBy": "",
-    "img": "images/p?.png",
-    "foto": "no"
+    "title": " ALIMURI",
+    "foundBy": "Hunters",
+    "img": "images/p37.png",
+    "foto": "si"
   }
 ]
 
