@@ -267,7 +267,7 @@
     "title": "Mulino Arenarius",
     "foundBy": "Modianus" ,
     "img": "images/p19.png",
-    "foto": "no"
+    "foto": "si"
   },
   {
     "id": "4", 
@@ -276,7 +276,7 @@
     "title": "Ponte Rivo Anaro",
     "foundBy": "Modianus" ,
     "img": "images/p4.png",
-    "foto": "no"
+    "foto": "si"
   },
   {
     "id": "23", 
