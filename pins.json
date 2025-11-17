@@ -315,13 +315,13 @@
     "foto": "si"
   },
    {
-    "id": "?????",
+    "id": "7",
     "lat": 40.66551,
     "lng": 14.4277,
     "title": "ZONA MARINA DI VICO",
-    "foundBy": "",
-    "img": "images/p?.png",
-    "foto": "no"
+    "foundBy": "Assi",
+    "img": "images/p7.png",
+    "foto": "si"
   },
   {
     "id": "20",
@@ -348,7 +348,7 @@
     "title": "ZONA FAITO",
     "foundBy": "Modianus",
     "img": "images/p35.png",
-    "foto": "no"
+    "foto": "si"
   },
   {
     "id": "37",
