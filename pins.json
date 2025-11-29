@@ -17,6 +17,15 @@
     "img": "images/p51.png",
     "foto": "si"
   },
+  {
+    "id": "55", 
+    "lat":"40.63973",
+    "lng":"14.42420" ,
+    "title":"        ",
+    "foundBy": "Volpi Del Faito" ,
+    "img": "images/p55.png",
+    "foto": "si"
+  },
 {
     "id": "33",
     "lat": 40.65745,
