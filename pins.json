@@ -8,6 +8,15 @@
     "img": "images/p10.png",
     "foto": "si"
   },   
+  {
+    "id": "51", 
+    "lat":"40.6455555",
+    "lng":"14.4558333" ,
+    "title":"Ticciano",
+    "foundBy": "segugi" ,
+    "img": "images/p51.png",
+    "foto": "si"
+  },
 {
     "id": "33",
     "lat": 40.65745,
@@ -60,6 +69,15 @@
     "title": "Via Madonna delle Grazie",
     "foundBy": "Volpi Del Faito" ,
     "img": "images/p38.png",
+    "foto": "si"
+  },
+    {
+    "id": "59", 
+    "lat":"40.66580",
+    "lng":"14.43649" ,
+    "title": "Via Cimitero",
+    "foundBy": "Volpi Del Faito" ,
+    "img": "images/p59.png",
     "foto": "si"
   },
   {
