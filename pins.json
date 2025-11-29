@@ -9,6 +9,15 @@
     "foto": "si"
   },
   {
+    "id": "64", 
+    "lat":"40.65813",
+    "lng":"14.45340" ,
+    "title":"Via Patierno",
+    "foundBy": "SansVillage" ,
+    "img": "images/p64.png",
+    "foto": "no"
+  },
+  {
     "id": "46", 
     "lat":"40.66008",
     "lng":"14.43938" ,
