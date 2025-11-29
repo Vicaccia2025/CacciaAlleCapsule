@@ -18,6 +18,24 @@
     "foto": "si"
   },
   {
+    "id": "69", 
+    "lat":"40.663068",
+    "lng":"14.444523" ,
+    "title": "Piana di semmana",
+    "foundBy": "Assi" ,
+    "img": "images/p69.png",
+    "foto": "si"
+  },
+  {
+    "id": "62", 
+    "lat":"40.6663256",
+    "lng":"14.4654405" ,
+    "title":"Faito",
+    "foundBy": "Assi" ,
+    "img": "images/p62.png",
+    "foto": "no"
+  },
+  {
     "id": "29", 
     "lat":"40.65801",
     "lng":"14.43096" ,
