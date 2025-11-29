@@ -18,6 +18,15 @@
     "foto": "si"
   },
   {
+    "id": "50", 
+    "lat":"40.65919",
+    "lng":"14.43347" ,
+    "title":" pietrapiano ",
+    "foundBy": "Juventude Bonea" ,
+    "img": "images/p50.png",
+    "foto": "si"
+  },
+  {
     "id": "55", 
     "lat":"40.63973",
     "lng":"14.42420" ,
