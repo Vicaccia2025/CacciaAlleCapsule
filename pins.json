@@ -72,6 +72,15 @@
     "foto": "si"
   },
     {
+    "id": "53", 
+    "lat":"40.65679",
+    "lng":"14.42684" ,
+    "title": "Marina di seiano",
+    "foundBy": "Volpi Del Faito" ,
+    "img": "images/p53.png",
+    "foto": "si"
+  },
+    {
     "id": "59", 
     "lat":"40.66580",
     "lng":"14.43649" ,
