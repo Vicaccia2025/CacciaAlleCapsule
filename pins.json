@@ -7,7 +7,16 @@
     "foundBy": "Juventude Bonea",
     "img": "images/p10.png",
     "foto": "si"
-  },   
+  },
+  {
+    "id": "46", 
+    "lat":"40.66008",
+    "lng":"14.43938" ,
+    "title":"Via Bell'Alba",
+    "foundBy": "Sans Village" ,
+    "img": "images/p46.png",
+    "foto": "no"
+  },
   {
     "id": "51", 
     "lat":"40.6455555",
