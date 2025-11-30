@@ -431,6 +431,15 @@
     "img": "images/p43.png",
     "foto": "no"
   },
+   {
+    "id": "56", 
+    "lat":"40.671913",
+    "lng":"14.435594" ,
+    "title": "Scrajo",
+    "foundBy": "Modianus" ,
+    "img": "images/p56.png",
+    "foto": "no"
+  },
   {
     "id": "4", 
     "lat":"40.6458333",
