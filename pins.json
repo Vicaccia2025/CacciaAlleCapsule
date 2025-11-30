@@ -82,12 +82,21 @@
   },
       {
     "id": "60", 
-    "lat":"40.6630556",
-    "lng":"14.444444" ,
+    "lat":"40.635",
+    "lng":"14.4377" ,
     "title": "via Traversa Grottelle",
     "foundBy": "Assi" ,
     "img": "images/p60.png",
     "foto": "no"
+  },
+        {
+    "id": "44", 
+    "lat":"40.6396730",
+    "lng":"14.4321630" ,
+    "title": "via camaldoli",
+    "foundBy": "Assi" ,
+    "img": "images/p44.png",
+    "foto": "si"
   },
   {
     "id": "62", 
@@ -294,6 +303,24 @@
     "title": "Raspolo (Massaquano)",
     "foundBy": "Falò" ,
     "img": "images/p8.png",
+    "foto": "si"
+  },
+    {
+    "id": "52", 
+    "lat":"40.66346",
+    "lng":"14.42949" ,
+    "title": "Via Cristoforo colombo",
+    "foundBy": "Falò" ,
+    "img": "images/p52.png",
+    "foto": "si"
+  },
+      {
+    "id": "65", 
+    "lat":"40.67640",
+    "lng":"14.43753" ,
+    "title": "Oasi",
+    "foundBy": "Falò" ,
+    "img": "images/p65.png",
     "foto": "si"
   },
   {
