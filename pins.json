@@ -414,6 +414,24 @@
     "foto": "si"
   },
   {
+    "id": "61", 
+    "lat":"40.642724",
+    "lng":"14.477645" ,
+    "title": "Santa Maria del Castello",
+    "foundBy": "Modianus" ,
+    "img": "images/p61.png",
+    "foto": "no"
+  },
+    {
+    "id": "43", 
+    "lat":"40.654710",
+    "lng":"14.457155" ,
+    "title": "Moiano",
+    "foundBy": "Modianus" ,
+    "img": "images/p43.png",
+    "foto": "no"
+  },
+  {
     "id": "4", 
     "lat":"40.6458333",
     "lng":"14.472777" ,
