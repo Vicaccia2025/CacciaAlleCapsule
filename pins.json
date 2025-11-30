@@ -414,6 +414,24 @@
     "foto": "si"
   },
     {
+    "id": "66", 
+    "lat":"40.649126",
+    "lng":"14.430091" ,
+    "title": "Fornacelle",
+    "foundBy": "hunters" ,
+    "img": "images/p66.png",
+    "foto": "si"
+  },
+  {
+    "id": "49", 
+    "lat":"40.655922",
+    "lng":"14.406313" ,
+    "title": "Montechiaro",
+    "foundBy": "hunters" ,
+    "img": "images/p49.png",
+    "foto": "no"
+  },
+    {
     "id": "5", 
     "lat":"40.658475",
     "lng":"14.419031" ,
