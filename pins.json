@@ -270,6 +270,24 @@
     "foto": "si"
   },
   {
+    "id": "67", 
+    "lat":"40.64695",
+    "lng":"14.43294" ,
+    "title": "Via Pacognano",
+    "foundBy": "Inseriooni" ,
+    "img": "images/p67.png",
+    "foto": "si"
+  },
+    {
+    "id": "48", 
+    "lat":"40.67433",
+    "lng":"14.43600" ,
+    "title": "Via Luigi Serio",
+    "foundBy": "Inseriooni" ,
+    "img": "images/p48.png",
+    "foto": "si"
+  },
+  {
     "id": "8", 
     "lat":"40.6600926",
     "lng":"14.4449669" ,
