@@ -18,6 +18,15 @@
     "foto": "no"
   },
   {
+    "id": "45", 
+    "lat":"40.65",
+    "lng":"14.410" ,
+    "title": "Strada Statale Sorrentina",
+    "foundBy": "Falò" ,
+    "img": "images/p45.png",
+    "foto": "si"
+  },
+  {
     "id": "70", 
     "lat":"40.662879",
     "lng":"14.449972" ,
