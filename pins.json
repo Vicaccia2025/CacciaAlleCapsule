@@ -9,6 +9,15 @@
     "foto": "si"
   },
   {
+    "id": "72", 
+    "lat":"40.641944",
+    "lng":"14.450000" ,
+    "title":"Preazzano",
+    "foundBy": "Segugi" ,
+    "img": "images/p72.jpg",
+    "foto": "si"
+  },
+  {
     "id": "54", 
     "lat":"40.641822",
     "lng":"14.445672" ,
