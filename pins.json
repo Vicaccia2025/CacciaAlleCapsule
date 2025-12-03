@@ -24,7 +24,7 @@
     "title":"Preazzano cantine Chiarina",
     "foundBy": "Modianus" ,
     "img": "images/p54.png",
-    "foto": "no"
+    "foto": "si"
   },
   {
     "id": "45", 
@@ -42,7 +42,7 @@
     "title":"semaforo Massaquano",
     "foundBy": "Modianus" ,
     "img": "images/p70.png",
-    "foto": "no"
+    "foto": "si"
   },
   {
     "id": "58", 
@@ -51,7 +51,7 @@
     "title":"Lontra Monte Faito",
     "foundBy": "Modianus" ,
     "img": "images/p58.png",
-    "foto": "no"
+    "foto": "si"
   },
   {
     "id": "68", 
@@ -492,7 +492,7 @@
     "title": "Santa Maria del Castello",
     "foundBy": "Modianus" ,
     "img": "images/p61.png",
-    "foto": "no"
+    "foto": "si"
   },
     {
     "id": "43", 
@@ -501,7 +501,7 @@
     "title": "Moiano",
     "foundBy": "Modianus" ,
     "img": "images/p43.png",
-    "foto": "no"
+    "foto": "si"
   },
    {
     "id": "56", 
@@ -510,7 +510,7 @@
     "title": "Scrajo",
     "foundBy": "Modianus" ,
     "img": "images/p56.png",
-    "foto": "no"
+    "foto": "si"
   },
   {
     "id": "4", 
