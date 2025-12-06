@@ -65,7 +65,8 @@
       padding:0 16px 40px;
     }
     .card{
-      background:radial-gradient(circle at top left, rgba(96,165,250,0.18), transparent 55%), linear-gradient(135deg, #020617 0%, var(--card) 45%, #020617 100%);
+      background:radial-gradient(circle at top left, rgba(96,165,250,0.18), transparent 55%),
+                 linear-gradient(135deg, #020617 0%, var(--card) 45%, #020617 100%);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       padding:16px;
@@ -201,9 +202,6 @@
 </head>
 <body>
 
-
-
-  <!-- SITO DI SOTTO (resta pronto per dopo) -->
   <div class="wrap">
     <header class="card">
       <div style="display:flex; align-items:center; gap:10px">
@@ -261,40 +259,37 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+    // === ZONE CAPSULE: cerchi arancioni semitrasparenti ===
+    const zonaCapsule1 = L.circle([40.6694492, 14.4386088], {
+      radius: 600,
+      color: '#f97316',
+      weight: 2,
+      fillColor: '#f97316',
+      fillOpacity: 0.25,
+      stroke: true
+    }).addTo(map);
 
-const zonaCapsule1 = L.circle([40.6694492, 14.4386088], {  
-  radius: 600,
-  color: '#f97316',
-  weight: 2,
-  fillColor: '#f97316',
-  fillOpacity: 0.25,
-  stroke: true
-}).addTo(map);
+    const zonaCapsule2 = L.circle([40.6394416, 14.4771785], {
+      radius: 600,
+      color: '#f97316',
+      weight: 2,
+      fillColor: '#f97316',
+      fillOpacity: 0.25,
+      stroke: true
+    }).addTo(map);
 
-const zonaCapsule2 = L.circle([40.6394416, 14.4771785], {  
-  radius: 600,
-  color: '#f97316',
-  weight: 2,
-  fillColor: '#f97316',
-  fillOpacity: 0.25,
-  stroke: true
-}).addTo(map);
+    const zonaCapsule3 = L.circle([40.9178177, 14.166294], {
+      radius: 600,
+      color: '#f97316',
+      weight: 2,
+      fillColor: '#f97316',
+      fillOpacity: 0.25,
+      stroke: true
+    }).addTo(map);
 
-const zonaCapsule3 = L.circle([40.9178177, 14.166294], {  
-  radius: 600,
-  color: '#f97316',
-  weight: 2,
-  fillColor: '#f97316',
-  fillOpacity: 0.25,
-  stroke: true
-}).addTo(map);
-
-
-zonaCapsule1.bindPopup('Zona speciale per capsule – Area 1');
-zonaCapsule2.bindPopup('Zona speciale per capsule – Area 2');
-zonaCapsule3.bindPopup('Zona speciale per capsule – Area 3');
-
-
+    zonaCapsule1.bindPopup('Zona speciale per capsule – Area 1');
+    zonaCapsule2.bindPopup('Zona speciale per capsule – Area 2');
+    zonaCapsule3.bindPopup('Zona speciale per capsule – Area 3');
 
     const TEAM_LIST = [
       { name: 'Juventude Bonea', color: '#e74c3c', emoji: '☢️' },
@@ -482,5 +477,3 @@ zonaCapsule3.bindPopup('Zona speciale per capsule – Area 3');
   </script>
 </body>
 </html>
-
-
