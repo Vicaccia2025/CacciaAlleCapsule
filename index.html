@@ -261,6 +261,37 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+
+const zonaCapsule = L.circle([40.6694492, 14.4386088], {  
+  radius: 600,                 
+  color: '#f97316',            
+  weight: 2,                   
+  fillColor: '#f97316',        
+  fillOpacity: 0.25,           
+  stroke: true
+}).addTo(map);
+
+const zonaCapsule = L.circle([40.6394416, 14.4771785], {  
+  radius: 600,                 
+  color: '#f97316',            
+  weight: 2,                   
+  fillColor: '#f97316',        
+  fillOpacity: 0.25,           
+  stroke: true
+}).addTo(map);
+
+const zonaCapsule = L.circle([40.9178177, 14.166294], {  
+  radius: 600,                 
+  color: '#f97316',            
+  weight: 2,                   
+  fillColor: '#f97316',        
+  fillOpacity: 0.25,           
+  stroke: true
+}).addTo(map);
+
+zonaCapsule.bindPopup('Zona speciale per capsule');
+
+
     const TEAM_LIST = [
       { name: 'Juventude Bonea', color: '#e74c3c', emoji: '☢️' },
       { name: 'Assi',            color: '#2980b9', emoji: '♠️' },
