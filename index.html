@@ -263,33 +263,37 @@
 
 
 const zonaCapsule1 = L.circle([40.6694492, 14.4386088], {  
-  radius: 600,                 
-  color: '#f97316',            
-  weight: 2,                   
-  fillColor: '#f97316',        
-  fillOpacity: 0.25,           
+  radius: 600,
+  color: '#f97316',
+  weight: 2,
+  fillColor: '#f97316',
+  fillOpacity: 0.25,
   stroke: true
 }).addTo(map);
 
 const zonaCapsule2 = L.circle([40.6394416, 14.4771785], {  
-  radius: 600,                 
-  color: '#f97316',            
-  weight: 2,                   
-  fillColor: '#f97316',        
-  fillOpacity: 0.25,           
+  radius: 600,
+  color: '#f97316',
+  weight: 2,
+  fillColor: '#f97316',
+  fillOpacity: 0.25,
   stroke: true
 }).addTo(map);
 
 const zonaCapsule3 = L.circle([40.9178177, 14.166294], {  
-  radius: 600,                 
-  color: '#f97316',            
-  weight: 2,                   
-  fillColor: '#f97316',        
-  fillOpacity: 0.25,           
+  radius: 600,
+  color: '#f97316',
+  weight: 2,
+  fillColor: '#f97316',
+  fillOpacity: 0.25,
   stroke: true
 }).addTo(map);
 
-zonaCapsule.bindPopup('Zona speciale per capsule');
+
+zonaCapsule1.bindPopup('Zona speciale per capsule – Area 1');
+zonaCapsule2.bindPopup('Zona speciale per capsule – Area 2');
+zonaCapsule3.bindPopup('Zona speciale per capsule – Area 3');
+
 
 
     const TEAM_LIST = [
