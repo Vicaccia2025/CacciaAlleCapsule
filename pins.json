@@ -1,12 +1,20 @@
 [
-  
+  {
+    "id": "41", 
+    "lat":"40.63931",
+    "lng":"14.47946" ,
+    "title":"Santa Maria del Castello",
+    "foundBy": "Falò" ,
+    "img": "images/p41.jpg",
+    "foto": "si"
+  },
   {
     "id": "71", 
     "lat":"40.6699167",
     "lng":"14.43886111111111" ,
     "title":"Strada Sperlonga",
     "foundBy": "Sans Village" ,
-    "img": "images/p?.jpg",
+    "img": "images/p71.jpg",
     "foto": "si"
   },
   {
