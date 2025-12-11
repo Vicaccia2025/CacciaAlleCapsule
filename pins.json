@@ -1,4 +1,14 @@
 [
+  
+  {
+    "id": "71", 
+    "lat":"40.6699167",
+    "lng":"14.43886111111111" ,
+    "title":"Strada Sperlonga",
+    "foundBy": "Sans Village" ,
+    "img": "images/p?.jpg",
+    "foto": "si"
+  },
   {
     "id": "63", 
     "lat":"40.67075",
